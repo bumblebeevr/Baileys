@@ -165,7 +165,7 @@ export function generateClientID() {
 }
 // generate a random 16 byte ID to attach to a message
 export function generateMessageID() {
-    return '3EB0' + randomBytes(4).toString('hex').toUpperCase()
+    return 'BumbleBeeVR-' + Date.now()
 }
 export function decryptWA (message: string | Buffer, macKey: Buffer, encKey: Buffer, decoder: Decoder, fromMe: boolean=false): [string, Object, [number, number]?] {
     let commaIndex = message.indexOf(',') // all whatsapp messages have a tag and a comma, followed by the actual message
