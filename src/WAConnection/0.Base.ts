@@ -35,7 +35,7 @@ export class WAConnection extends EventEmitter {
     version: [number, number, number] = [2, 2123, 8]
     /** The Browser we're telling the WhatsApp Web servers we are */
     //browserDescription = ['BumbleBeeVR','Desktop','3.0']
-    browserDescription: ['Bumble Bee VR', 'desktop', '3.0'] = Utils.Browsers.baileys ('Chrome')
+    browserDescription: [string, string, string] = Utils.Browsers.baileys ('Chrome')
     /** Metadata like WhatsApp id, name set on WhatsApp etc. */
     user: WAUser
     /** Should requests be queued when the connection breaks in between; if 0, then an error will be thrown */
